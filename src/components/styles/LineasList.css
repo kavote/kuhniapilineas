@@ -9,11 +9,3 @@
   display: flex;
   padding: 1rem;
 }
-
-.LineasListItem__avatar {
-  border-radius: 50%;
-  background: #a3a3a3;
-  margin-right: 0.5rem;
-  width: 80px;
-  height: 80px;
-}
