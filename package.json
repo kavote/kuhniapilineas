@@ -1,7 +1,7 @@
 {
+  "homepage": "http://kavote.github.io/kuhniapilineas",
   "name": "kuhniapi-lineas",
   "version": "0.1.0",
-  "homepage": "http://kavote.github.io/kuhniapilineas",
   "private": true,
   "scripts": {
     "start": "npm-run-all -p client server",
