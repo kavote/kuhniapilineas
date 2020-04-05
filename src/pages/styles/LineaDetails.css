@@ -1,0 +1,20 @@
+.LineaDetails__hero {
+  width: 100%;
+  padding: 2rem 0;
+  background: url('../../images/poligons.png'), #1B1B25;
+  background-repeat: repeat;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.LineaDetails__hero-attendant-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.LineaDetails__buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
