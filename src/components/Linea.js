@@ -13,7 +13,7 @@ class Linea extends React.Component {
 
         <div className="Linea__section-name">
           <h1>
-            # {this.props.id} - {this.props.linea} <br /><br />
+            # {this.props._id} - {this.props.linea} <br /><br />
             {this.props.descrip} <br /> {this.props.usuario}
           </h1>
         </div>

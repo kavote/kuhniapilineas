@@ -22,7 +22,7 @@ class LineaDetailsContainer extends React.Component {
 
     try {
       const data = await api.lineas.read(this.props.match.params.lineaId);
-      this.setState({ loading: false, data: data });
+      this.setState({ loading: false, data: data.result });
     } catch (error) {
       this.setState({ loading: false, error: error });
     }

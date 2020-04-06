@@ -13,7 +13,7 @@ function crearLineas(limit = 5) {
     const numero = faker.name.numero();
 
     result.push({
-      id: faker.random.uuid(),
+      _id: faker.random.uuid(),
       linea,
       usuario,
       usufecha,

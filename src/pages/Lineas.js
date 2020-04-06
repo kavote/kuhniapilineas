@@ -31,7 +31,7 @@ class Lineas extends React.Component {
 
     try {
       const data = await api.lineas.list();
-      this.setState({ loading: false, data: data });
+      this.setState({ loading: false, data: data.results });
     } catch (error) {
       this.setState({ loading: false, error: error });
     }

@@ -1,7 +1,7 @@
 {
   "lineas": [
     {
-      "id": "1",
+      "_id": "1",
       "linea": "linea 1",
       "usuario": "usuario 1",
       "usufecha": "05/04/2020",
@@ -9,7 +9,7 @@
       "numero": "55110193"
     },
     {
-      "id": "2",
+      "_id": "2",
       "linea": "linea 2",
       "usuario": "usuario 2",
       "usufecha": "05/04/2020",
@@ -17,7 +17,7 @@
       "numero": "55110195"
     },
     {
-      "id": "3",
+      "_id": "3",
       "linea": "linea 3",
       "usuario": "usuario 3",
       "usufecha": "05/04/2020",
@@ -25,7 +25,7 @@
       "numero": "55110197"
     },
     {
-      "id": "11",
+      "_id": "11",
       "linea": "linea 11",
       "descrip": "descripción",
       "usuario": "usuario",
@@ -34,7 +34,7 @@
       "numero": ""
     },
     {
-      "id": "12",
+      "_id": "12",
       "linea": "12",
       "descrip": "12",
       "usuario": "12",

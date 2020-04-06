@@ -16,7 +16,7 @@ class LineaForm extends React.Component {
               className="form-control"
               type="number"
               name="id"
-              value={this.props.formValues.id}
+              value={this.props.formValues._id}
               required="required"
             />
           </div>

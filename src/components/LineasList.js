@@ -9,7 +9,7 @@ class LineasListItem extends React.Component {
       <div className="LineasListItem">
         <div>
           <strong>
-          {this.props.linea.id} - {this.props.linea.linea}
+          {this.props.linea._id} - {this.props.linea.linea}
           </strong>
           <br />{this.props.linea.descrip}
           <br />
@@ -84,10 +84,10 @@ function LineasList(props) {
       <ul className="list-unstyled">
         {filteredLineas.map(linea => {
           return (
-            <li key={linea.id}>
+            <li key={linea._id}>
               <Link
                 className="text-reset text-decoration-none"
-                to={`/lineas/${linea.id}`}
+                to={`/lineas/${linea._id}`}
               >
                 <LineasListItem linea={linea} />
               </Link>

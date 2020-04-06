@@ -15,11 +15,11 @@ function LineaDetails(props) {
         <div className="container">
           <div className="row">
             <div className="col-6">
-              <img src={confLogo} alt="Logo de la API" />
+              <img src={confLogo} alt="Logo de la API" width= "50%"/>
             </div>
             <div className="col-6 LineaDetails__hero-attendant-name">
               <h1>
-                {linea.id} {linea.linea}
+                {linea._id} - {linea.linea}
               </h1>
             </div>
           </div>
@@ -30,6 +30,9 @@ function LineaDetails(props) {
         <div className="row">
           <div className="col">
             <Linea
+              _id={linea._id}
+              descrip={linea.descrip}
+              linea={linea.linea}
               usuario={linea.usuario}
               usufecha={linea.usufecha}
               usuhora={linea.usuhora}
@@ -42,7 +45,7 @@ function LineaDetails(props) {
               <div>
                 <Link
                   className="btn btn-primary mb-4"
-                  to={`/lineas/${linea.id}/edit`}
+                  to={`/lineas/${linea._id}/edit`}
                 >
                   Editar
                 </Link>

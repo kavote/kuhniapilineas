@@ -32,7 +32,8 @@ class LineaEdit extends React.Component {
     try {
       const data = await api.lineas.read(this.props.match.params.lineaId);
 
-      this.setState({ loading: false, form: data });
+      this.setState({ loading: false, form: data.result });
+      console.log(this.state.form);
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
@@ -80,7 +81,7 @@ class LineaEdit extends React.Component {
           <div className="row">
             <div className="col-6">
               <Linea
-                id={this.state.form.id || 'ID'}
+                id={this.state.form._id || 'ID'}
                 linea={this.state.form.linea || 'LINEA'}
                 descrip={this.state.form.descrip || 'DESCRIPCION'}
                 usuario={this.state.form.usuario || 'USUARIO'}
