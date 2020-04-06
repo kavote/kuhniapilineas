@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "9b5ac64b549bc849fa6e",
-    "url": "./static/css/main.cc868202.chunk.css"
+    "revision": "2e8c3ca95c69969da5a9",
+    "url": "./static/css/main.62c2bbf7.chunk.css"
   },
   {
-    "revision": "9b5ac64b549bc849fa6e",
-    "url": "./static/js/main.9b5ac64b.chunk.js"
+    "revision": "2e8c3ca95c69969da5a9",
+    "url": "./static/js/main.2e8c3ca9.chunk.js"
   },
   {
     "revision": "8c97409f0ee389fe75da",
     "url": "./static/js/runtime~main.8c97409f.js"
   },
   {
-    "revision": "64cb1289f223837f2eea",
+    "revision": "da687d4b6cf6960ba40e",
     "url": "./static/css/2.76038015.chunk.css"
   },
   {
-    "revision": "64cb1289f223837f2eea",
-    "url": "./static/js/2.64cb1289.chunk.js"
+    "revision": "da687d4b6cf6960ba40e",
+    "url": "./static/js/2.da687d4b.chunk.js"
   },
   {
     "revision": "661f594d9d3c57ac89e08d72823b6e41",
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "./static/media/poligons.e9cd2f76.png"
   },
   {
-    "revision": "18dfad8f8b5f763994ba8bf6917316c2",
+    "revision": "6498dcbcef1018231a6827155e695d81",
     "url": "./index.html"
   }
 ];
