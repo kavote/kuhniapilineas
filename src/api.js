@@ -11,8 +11,14 @@ async function callApi(endpoint, options = {}) {
   await simulateNetworkLatency();
 
   options.headers = {
-    'Access-Control-Allow-Origin': '*',
-    'Content-Type': 'application/json',
+    //Puede ser consumida desde cualquier lugar
+    //'Access-Control-Allow-Origin': '*',
+    //Cabeceras permitidas
+    //'Access-Control-Allow-Headers': 'X-API-KEY,Origin,X-Requested-With,Content-Type,Accept,Access-Control-Request-Method',
+    //Metodos Permitidos    
+    //'Access-Control-Allow-Methods':'GET,POST,PUT,DELETE',
+    //'Allow':'GET,POST,PUT,DELETE',
+    "Content-Type": "application/json",
     Accept: 'application/json',
   };
 
@@ -50,19 +56,44 @@ const api = {
       return data;
     },
     update(lineaId, updates) {
-      let linea = {id:updates._id,linea:updates.linea,usuario:updates.usuario,usufecha:updates.usufecha,usuhora:updates.usuhora,numero:updates.numero};
+      let myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+      let raw = JSON.stringify({_id:updates._id,linea:updates.linea,usuario:updates.usuario,usufecha:updates.usufecha,usuhora:updates.usuhora,numero:updates.numero});
+      let requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+      };
+      
+      return  fetch("https://kapi-lineas-ruddy.now.sh/api/lineas/"+lineaId+"/update", requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+      /*
       return callApi(`/lineas/${lineaId}/update`, {
         method: 'POST',
         body: JSON.stringify(linea),
+        //mode: 'CORS',
         redirect: 'follow',
-      });
+      });*/
     },
     // Lo hubiera llamado `delete`, pero `delete` es un keyword en JavaScript asi que no es buena idea :P
     remove(lineaId) {
-      return callApi(`/lineas/${lineaId}/remove`, {
+      var raw = "";
+      var requestOptions = {
+        method: 'POST',
+        body: raw,
+        redirect: 'follow'
+      };
+      return fetch("https://kapi-lineas-ruddy.now.sh/api/lineas/"+lineaId+"/remove", requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+      /*return callApi(`/lineas/${lineaId}/remove`, {
         method: 'POST',
         redirect: 'follow'
-      });
+      });*/
     },
   },
 };
